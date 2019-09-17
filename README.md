@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dummy
 
-## Available Scripts
+Created using [create-react-app](https://github.com/facebook/create-react-app/)
 
-In the project directory, you can run:
+## Pre-requisites
 
-### `npm start`
+- Node(see `package.json` for version)
+- Use [Yarn](https://yarnpkg.com/lang/en/) over `npm` (An error is raised when using npm for installing packages)
+- Git version specified in `check-requirements.sh`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Note: Git of a particular version is a dependency of [Husky](https://github.com/typicode/husky)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Editor Integrations
 
-### `npm test`
+I personally use [Visual Studio Code](https://code.visualstudio.com/) which comes handy for react development. Install tools in your own editor for better development.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ESLint](https://eslint.org) for linting.
+- [Prettier](https://github.com/prettier/prettier) for formatting the code automatically.
 
-### `npm run build`
+Note: Git hooks are set in place to format & lint code. See `package.json`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```bash
+git clone <git-url>
+cd <repo-name>
+yarn
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Development
 
-### `npm run eject`
+Before starting development, please go through [GUIDELINES](/GUIDELINES.md)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+yarn start (or) npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The development server opens the app at http://localhost:3000 in your default browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Debugging
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The browser's console is our best debugger. Yet download the developer tools for better debugging
 
-## Learn More
+- [React](https://github.com/facebook/react-devtools)
+- If you use `redux`, see [Redux](https://github.com/gaearon/redux-devtools)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Also use devtools corresponding to any other packages you use in future.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For debugging in editor, go [here](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#debugging-in-the-editor)
 
-### Code Splitting
+## Testing
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Before testing, make sure to install [watchman](https://github.com/facebook/watchman)
 
-### Analyzing the Bundle Size
+```
+yarn test (or) npm test
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+For testing in editor, go [here](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#editor-integration)
 
-### Making a Progressive Web App
+## CI/CD
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Deployment
