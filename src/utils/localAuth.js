@@ -1,12 +1,19 @@
 const TOKEN = process.env.REACT_APP_LOCAL_STORAGE_TOKEN_NAME;
 
-export const setToken = token => {
+function setToken(token) {
   localStorage.setItem(TOKEN, token);
-};
+}
 
-export const removeToken = () => {
+function removeToken() {
   localStorage.removeItem(TOKEN);
-};
+}
 
-export const isTokenPresent = () =>
-  localStorage.getItem(TOKEN) ? true : false;
+function getToken() {
+  return localStorage.getItem(TOKEN);
+}
+
+function isTokenPresent() {
+  return getToken() ? true : false;
+}
+
+export { setToken, removeToken, getToken, isTokenPresent };

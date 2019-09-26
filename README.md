@@ -48,6 +48,10 @@ Also use devtools corresponding to any other packages you use in future.
 
 For debugging in editor, go [here](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#debugging-in-the-editor)
 
+## Pitfall/Caveats
+
+- `API` should be invoked only inside `sagas`. `push` does not work outside of redux middlewares.
+
 ## Testing
 
 Before testing, make sure to install [watchman](https://github.com/facebook/watchman)
